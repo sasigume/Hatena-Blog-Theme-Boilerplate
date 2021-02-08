@@ -1,8 +1,8 @@
 {
   "name": "hatena-blog-theme-boilerplate",
-  "version": "2.0.0",
-  "description": "Boilerplate for Hatena Blog theme",
-  "author": "Hatena Blog",
+  "version": "2.0.1",
+  "description": "A simple Hatena Blog theme",
+  "author": "sasigume",
   "license": "MIT",
   "scripts": {
     "prestart": "npm run build",

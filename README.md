@@ -1,3 +1,9 @@
+2021/02/08フォーク　あくまで個人利用
+
+＝＝＝
+
+**以下、元のREADME**
+
 # Hatena-Blog-Theme-Boilerplate
 
 Boilerplate は、はてなブログのデザインCSSカスタマイズの土台に適したデザインテーマです。
