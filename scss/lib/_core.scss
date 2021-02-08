@@ -40,17 +40,8 @@ h1,h2,h3,h4,h5,h6 {
 /* container */
 #container,
 #footer {
-    padding-left: 10px;
-    padding-right: 10px;
-    @media #{$mq-sm} {
-        width: 720px;
-        margin: auto;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    @media #{$mq-md} {
-        width: 940px;
-    }
+    display: flex;
+    justify-content: center;
 }
 
 /* 2カラムレイアウト */
@@ -58,24 +49,35 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media #{$mq-sm} {
+    padding: 0 0.4rem;
+
+    @media #{$mq-md} {
         flex-direction: row;
+        justify-content: center;
+        padding: 0 0;
     }
 }
 #wrapper {
     @media #{$mq-sm} {
-        width: 480px;
+        width: 650px;
     }
     @media #{$mq-md} {
-        width: 600px;
+        width: 650px;
     }
 }
 #box2 {
+    flex-grow: 1;
+    max-width: 240px;
+    margin-left: 3rem;
+
     @media #{$mq-sm} {
-        width: 200px;
+        
     }
     @media #{$mq-md} {
-        width: 300px;
+        position: sticky;
+        top: 0px;
+        max-height: 100vh;
+        overflow-y: scroll;
     }
 }
 
@@ -159,6 +161,10 @@ h1,h2,h3,h4,h5,h6 {
 .header-image-enable {
     #blog-title {
         margin: 0 0 2em;
+
+        a {
+            text-shadow: none!important;
+        }
     }
     #blog-title-inner {
         display: flex;
@@ -168,6 +174,8 @@ h1,h2,h3,h4,h5,h6 {
     #blog-title-content {
         margin-left: 10px;
         margin-right: 10px;
+        padding: 10px;
+        background: #000;
     }
 }
 
@@ -227,130 +235,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* 記事内の書式 */
 .entry-content {
-    img,
-    video {
-        max-width: 100%;
-        height: auto;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 1em 0 0.8em 0;
-    }
-    h1 {
-        font-size: 1.5rem;
-        @media #{$mq-md} {
-            font-size: 1.7rem;
-        }
-    }
-    h2 {
-        font-size: 1.4rem;
-        @media #{$mq-md} {
-            font-size: 1.5rem;
-        }
-    }
-    h3 {
-        font-size: 1.2rem;
-        @media #{$mq-md} {
-            font-size: 1.3rem;
-        }
-    }
-    h4 {
-        font-size: 1.1rem;
-    }
-    h5 {
-        font-size: 1rem;
-    }
-    h6 {
-        font-size: .9rem;
-    }
-    ul,
-    ol,
-    dd {
-        margin: 0 0 1em 1.5em;
-        padding: 0;
-        li {
-            ul,ol {
-                margin-bottom: 0;
-            }
-        }
-    }
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-        border-bottom: 1em;
-        margin-bottom: 1em;
-        width: 100%;
-        overflow: auto;
-        display: block;
-        font-size: .8rem;
-        @media #{$mq-md} {
-            font-size: .9rem;
-        }
-    }
-    table th,
-    table td {
-        border: 1px solid $border;
-        padding: 5px 10px;
-    }
-    table th {
-        background: $bg-light;
-    }
-
-    blockquote {
-        border: 1px solid $border;
-        margin: 0 0 10px;
-        padding: 20px;
-        p:first-child {
-            margin-top: 0;
-        }
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-    pre,
-    code {
-        font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
-    }
-    pre {
-        background: $bg-light;
-        border: none;
-        white-space: pre-wrap;
-        text-overflow: ellipsis;
-        line-height: 1.3;
-        font-size: .8rem;
-        padding: 10px;
-        & > code {
-            margin: 0;
-            padding: 0;
-            white-space: pre;
-            border: none;
-            background-color: transparent;
-            font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
-        }
-    }
-    code {
-        font-size: 90%;
-        margin: 0 2px;
-        padding: 0px 5px;
-        background-color: $bg-light;
-        border-radius: 3px;
-    }
-    hr {
-        width: 50%;
-        border: 0;
-        border: none;
-        border-top: 1px solid $border;
-        margin: 2em auto;
-    }
-    .table-of-contents {
-        padding: 1em 1em 1em 2em;
-        margin: 1em 0;
-        border: 1px solid $border;
-    }
+    @import 'scss/lib/content';
 }
 
 /* 記事下 */
