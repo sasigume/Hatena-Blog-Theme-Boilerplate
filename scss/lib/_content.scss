@@ -403,12 +403,12 @@ hr {
 }
 
 ul.table-of-contents {
-    padding: 1em 1em 1em 2em;
+    padding: 1rem 0 1rem 1rem;
     margin : 1em 0;
     border : 1px solid $border;
 
-    ul {
-        margin-left: 0.2em;
+    li>ul {
+        margin-left: 1em;
     }
 }
 
@@ -849,7 +849,7 @@ ol {
             >ol {
                 list-style-type: none;
                 font-size      : 0.9em;
-                margin-left    : 1em;
+                margin-left    : 0em;
                 margin-bottom  : 1em;
             }
         }
@@ -1011,7 +1011,7 @@ span.v10 {
 
     ol,
     ul {
-        margin-left: 2em;
+        margin-left: 1rem;
 
         li {
             margin: 0.3em;
