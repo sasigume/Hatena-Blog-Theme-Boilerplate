@@ -220,7 +220,7 @@ dl {
     dd {
         position     : relative;
         top          : 0px;
-        margin-bottom: 2em;
+        margin: 0 0 2rem 0.4rem;
 
         &:last-child {
             margin-bottom: 0;
