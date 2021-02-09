@@ -39,6 +39,10 @@ a {
     text-decoration: underline;
     color          : #0066FF;
 
+    &.entry-see-more {
+        @include buttonHoverShadow(#00a5a5);
+    }
+
     &:hover {
         color: #3F99FF;
     }

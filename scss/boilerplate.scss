@@ -13,11 +13,16 @@
   Released under the MIT License.
 */
 
+* {
+  box-sizing: border-box;
+}
+
 // import normalize
 @import "node_modules/normalize.css/normalize";
 
 // import variable
 @import "lib/_variable";
+@import "lib/mixin";
 
 // import core
 @import "lib/_core";
