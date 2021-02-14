@@ -7,9 +7,10 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "npm-run-all -p watch server",
-    "build": "npm-run-all scss autoprefixer",
+    "build": "npm-run-all scss amp autoprefixer",
     "scss": "node-sass scss/boilerplate.scss build/boilerplate.css --output-style compressed --source-map build/",
-    "autoprefixer": "postcss --use autoprefixer -r build/boilerplate.css",
+    "amp": "node-sass scss/amp.scss build/amp.css --output-style compressed",
+    "autoprefixer": "postcss --use autoprefixer -r build/boilerplate.css buildamp.css",
     "server": "browser-sync start -c bs-config.js",
     "watch": "chokidar \"scss/\" -c \"npm run build\""
   },
