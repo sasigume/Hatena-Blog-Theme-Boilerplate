@@ -4,5 +4,6 @@
 @import "lib/mixin";
 
 .entry-content {
+  overflow: hidden;
   @import "lib/content";
 }
