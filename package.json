@@ -1,6 +1,6 @@
 {
   "name": "hatena-blog-theme-boilerplate",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "A simple Hatena Blog theme",
   "author": "sasigume",
   "license": "MIT",
@@ -8,11 +8,14 @@
     "prestart": "npm run build",
     "start": "npm-run-all -p watch server",
     "build": "npm-run-all scss amp autoprefixer",
+    "buildmobile": "npm-run-all scssmobile autoprefixer",
     "scss": "node-sass scss/boilerplate.scss build/boilerplate.css --output-style compressed --source-map build/",
+    "scssmobile": "node-sass scss/mobile.scss build/mobile.css --output-style compressed",
     "amp": "node-sass scss/amp.scss build/amp.css --output-style compressed",
     "autoprefixer": "postcss --use autoprefixer -r build/boilerplate.css buildamp.css",
     "server": "browser-sync start -c bs-config.js",
-    "watch": "chokidar \"scss/\" -c \"npm run build\""
+    "watch": "chokidar \"scss/\" -c \"npm run build\"",
+    "watchmobile": "chokidar \"scss/\" -c \"npm run buildmobile\""
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
